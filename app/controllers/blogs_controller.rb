@@ -10,6 +10,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @comments = @blog.comments.all
+    @comment = @blog.comments.build
   end
 
   # GET /blogs/new
